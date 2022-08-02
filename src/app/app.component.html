@@ -1,7 +1,17 @@
 <app-top-bar></app-top-bar>
-
+Navigate to <a routerLink="/@Angular">my profile</a>
 <div class="container">
-  <router-outlet></router-outlet>
+  <div class="sider-box">
+    <div class="sider-item" [routerLink]="['/news-list']" routerLinkActive="router-link-active">News</div>
+    <div class="sider-item" [routerLink]="['/article-list']" routerLinkActive="router-link-active">Article</div>
+    <div class="sider-item" [routerLink]="['/skills-list']" routerLinkActive="router-link-active">SKills</div>
+    <div class="sider-item" [routerLink]="['/others-list']" routerLinkActive="router-link-active">Others</div>
+    <div class="sider-item" [routerLink]="['/charts-list']" routerLinkActive="router-link-active">Charts</div>
+    <div class="sider-item" [routerLink]="['/']" routerLinkActive="router-link-active">Products </div>
+  </div>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
 </div>
 
 <!-- 
